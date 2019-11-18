@@ -8,7 +8,9 @@
 NAME	=	bsq
 
 SRC	=	src/main.c \
-		src/fs_file.c
+		src/fs_file.c \
+		src/my_putstr.c \
+		src/my_putchar.c
 
 CC	=	gcc
 

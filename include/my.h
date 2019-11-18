@@ -16,5 +16,7 @@
 #include <stdio.h>
 
 int fs_open_file(char const *file);
+void my_putchar(char c);
+int my_putstr(char const *str);
 
 #endif
