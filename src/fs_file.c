@@ -22,7 +22,8 @@ int fs_open_file(char const *file)
     re = read(fd, buffer, st.st_size);
     if (re == -1 || re == 0)
         return (84);
-    write(1, buffer, st.st_size);
+    if (bsq(buffer) == 84)
+        return (84);
     close (fd);
     free (buffer);
     return (0);

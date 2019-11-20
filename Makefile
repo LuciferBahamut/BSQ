@@ -10,7 +10,13 @@ NAME	=	bsq
 SRC	=	src/main.c \
 		src/fs_file.c \
 		src/my_putstr.c \
-		src/my_putchar.c
+		src/my_putchar.c \
+		src/bsq.c \
+		src/display.c \
+		src/my_split.c \
+		src/nbligne.c \
+		src/my_atoi.c \
+		src/compare_nbligne.c
 
 CC	=	gcc
 
