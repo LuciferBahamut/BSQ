@@ -7,10 +7,13 @@
 
 #include "my.h"
 
-void display(char *map, int i)
+void display(char **map, int d)
 {
-    while (map[i] != '\0') {
-        my_putchar(map[i]);
-        i++;
+    int i = 0;
+    d++;
+    
+    for (i++; i != d; i++) {
+        my_putstr(map[i]);
+        my_putchar('\n');
     }
 }

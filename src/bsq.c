@@ -7,6 +7,21 @@
 
 #include "my.h"
 
+char trans_point(char **str)
+{
+    int i = 0;
+    
+    for (int j = 0; ; i++)
+    {
+        if (str[j][i] == 'o') {
+            j++;
+            i = 0;
+        }
+        if (str[j][i] == '.')
+            str[j][i] = 'X';
+    }
+}
+
 int zap_firt_ligne(char *map)
 {
     int i = 0;
@@ -22,7 +37,7 @@ int charlen(char *map)
     int nbchar = 0;
 
     for (int i = zap_firt_ligne(map); map[i] != '\0'; i++) {
-        if (map[i] == '*') {
+        if (map[i] == 'o') {
             break;
         }
         if (map[i] == '\n')
@@ -31,15 +46,13 @@ int charlen(char *map)
             return (84);
         nbchar++;
     }
-    return(nbchar);
+    return (0);
 }
 
 int bsq(char *map)
 {
-//    my_split(map);
-//        return (84);
-    if (charlen(map) == 84)
-        return (84);
-    display(map, zap_firt_ligne(map));
+    char **str = my_split(map);
+
+    display(str, nbligne(map));
     return (0);
 }

@@ -19,7 +19,7 @@ int fs_open_file(char const *file);
 void my_putchar(char c);
 int my_putstr(char const *str);
 int bsq(char* buffer);
-void display(char *map, int i);
+void display(char **map, int d);
 int nbligne(char *map);
 char **my_split(char *src);
 int my_atoi(char const *str);
