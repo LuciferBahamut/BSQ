@@ -11,15 +11,23 @@ char **my_split(char *src)
 {
     char **str = malloc((nbligne(src) + 1) * sizeof(char *));
     int i = 0;
+    int k = 0;
 
     for (int j = 0; src[i] != '\0'; i++) {
         if (src[i] == '\n') {
-            src[i] = '\0';
+            j++;
+        }
+        str[j] = malloc(i + 1);
+    }
+    i = 0;
+    for (int j = 0; src[i] != '\0'; i++, k++) {
+        if (src[i] == '\n') {
+            str[j][i] = '\0';
             j++;
             i++;
+            k = 0;
         }
-        str[j][i] = src[i];
+        str[j][k] = src[i];
     }
-    free(str);
     return (str);
 }
