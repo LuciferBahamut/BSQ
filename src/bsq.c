@@ -10,7 +10,7 @@
 char trans_point(char **str)
 {
     int i = 0;
-    
+
     for (int j = 0; ; i++)
     {
         if (str[j][i] == 'o') {
@@ -25,7 +25,7 @@ char trans_point(char **str)
 int zap_firt_ligne(char *map)
 {
     int i = 0;
-    
+
     while (map[i] != '\n') {
         i++;
     }

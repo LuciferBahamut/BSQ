@@ -13,7 +13,7 @@ int fs_open_file(char const *file)
     int re;
     char *buffer;
     struct stat st;
-    
+
     fd = open(file, O_RDONLY);
     if (fd == -1)
         return (84);
