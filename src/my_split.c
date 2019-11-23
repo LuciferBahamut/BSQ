@@ -14,9 +14,8 @@ char **my_split(char *src)
     int k = 0;
 
     for (int j = 0; src[i] != '\0'; i++) {
-        if (src[i] == '\n') {
+        if (src[i] == '\n')
             j++;
-        }
         str[j] = malloc(i + 1);
     }
     i = 0;

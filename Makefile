@@ -16,7 +16,8 @@ SRC	=	src/main.c \
 		src/my_split.c \
 		src/nbligne.c \
 		src/my_atoi.c \
-		src/compare_nbligne.c
+		src/compare_nbligne.c \
+		src/count_str.c
 
 CC	=	gcc
 

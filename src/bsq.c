@@ -7,52 +7,66 @@
 
 #include "my.h"
 
-char trans_point(char **str)
+int charlen(char **str, char *map)
 {
-    int i = 0;
-
-    for (int j = 0; ; i++)
-    {
-        if (str[j][i] == 'o') {
-            j++;
-            i = 0;
+    int a = 0;
+    int b = count_point(map);
+    int c = count_point(map);
+    
+    for (int i = 2, j = 0; i != c; i++) {
+        for (j = 0, a = 0; str[i][j] != '\0'; j++) {
+            if (str[i][j] == '.')
+                a++;
+            if (str[i][j] == 'o') {
+                if (a < b)
+                    b = a;
+                i++;
+                j = -1;
+                if (i == c)
+                    break;
+            }
         }
-        if (str[j][i] == '.')
-            str[j][i] = 'X';
-    }
-}
-
-int zap_firt_ligne(char *map)
-{
-    int i = 0;
-
-    while (map[i] != '\n') {
-        i++;
-    }
-    return (i + 1);
-}
-
-int charlen(char *map)
-{
-    int nbchar = 0;
-
-    for (int i = zap_firt_ligne(map); map[i] != '\0'; i++) {
-        if (map[i] == 'o') {
+        if (i == c)
             break;
-        }
-        if (map[i] == '\n')
-            i++;
-        if (map[i] != '.')
-            return (84);
-        nbchar++;
     }
-    return (0);
+    return (b);
+}
+
+char **special_point(char **str, char *map)
+{
+    if (nbligne(map) == 1) {
+        if (str[1][0] == '.') 
+            str[1][0] = 'x';
+    }    
+}
+
+char **trans_point(char **str, char *map)
+{
+    int c = charlen(str, map);
+    int k = c + 1;
+
+    for (int j = 1; j != k; j++) {
+        for (int i = 0; i != c; i++) {
+            if (str[j][i] == '.')
+                str[j][i] = 'x';
+            if (str[j][i] == 'o') {
+                j++;
+                if (i < c)
+                    break;
+                i = -1;
+            }
+        }
+    }
+    return (str);
 }
 
 int bsq(char *map)
 {
     char **str = my_split(map);
 
+    if (compare_nbligne(str, map) == 84)
+        return (84);
+    trans_point(str, map);
     display(str, nbligne(map));
     return (0);
 }
