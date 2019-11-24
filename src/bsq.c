@@ -64,6 +64,8 @@ int bsq(char *map)
 
     if (compare_nbligne(str, map) == 84)
         return (84);
+    if (compare_char(map) == 84)
+        return (84);
     if (nbligne(map) == 1)
         special_point(str, map);
     if (nbligne(map) > 1)

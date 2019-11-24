@@ -25,5 +25,6 @@ char **my_split(char *src);
 int my_atoi(char const *str);
 int compare_nbligne(char **str, char *src);
 int count_point(char *map);
+int compare_char(char *str);
 
 #endif
