@@ -34,10 +34,8 @@ int charlen(char **str, char *map)
 
 char **special_point(char **str, char *map)
 {
-    if (nbligne(map) == 1) {
         if (str[1][0] == '.') 
-            str[1][0] = 'x';
-    }    
+            str[1][0] = 'x';    
 }
 
 char **trans_point(char **str, char *map)
@@ -66,7 +64,10 @@ int bsq(char *map)
 
     if (compare_nbligne(str, map) == 84)
         return (84);
-    trans_point(str, map);
+    if (nbligne(map) == 1)
+        special_point(str, map);
+    if (nbligne(map) > 1)
+        trans_point(str, map);
     display(str, nbligne(map));
     return (0);
 }

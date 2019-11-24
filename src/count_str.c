@@ -24,6 +24,8 @@ int count_point(char *str)
     for (int i = zap_first_ligne(str); str[i] != '\0'; i++) {
         if (str[i] == '.')
             c++;
+        if (str[i] == '\n')
+            break;
         if (str[i] == 'o')
              break;
     }
