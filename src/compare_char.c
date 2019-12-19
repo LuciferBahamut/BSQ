@@ -9,12 +9,8 @@
 
 int compare_char(char *str)
 {
-    int i = 0;
+    int i = 1;
 
-    while(str[i] != '\n') {
-        i++;
-    }
-    i++;
     while (str[i] != '\0') {
         if (str[i] == 'o' || str[i] == '.' || str[i] == '\n')
             i++;

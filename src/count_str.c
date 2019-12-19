@@ -27,7 +27,7 @@ int count_point(char *str)
         if (str[i] == '\n')
             break;
         if (str[i] == 'o')
-             break;
+            break;
     }
     return (c);
 }

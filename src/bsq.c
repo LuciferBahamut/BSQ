@@ -12,7 +12,7 @@ int charlen(char **str, char *map)
     int a = 0;
     int b = count_point(map);
     int c = count_point(map);
-    
+
     for (int i = 2, j = 0; i != c; i++) {
         for (j = 0, a = 0; str[i][j] != '\0'; j++) {
             if (str[i][j] == '.')
@@ -34,8 +34,8 @@ int charlen(char **str, char *map)
 
 char **special_point(char **str, char *map)
 {
-        if (str[1][0] == '.') 
-            str[1][0] = 'x';    
+        if (str[1][0] == '.')
+            str[1][0] = 'x';
 }
 
 char **trans_point(char **str, char *map)
