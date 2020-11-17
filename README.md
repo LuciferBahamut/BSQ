@@ -1,28 +1,19 @@
-# BSQ
-{EPITECH} -- First year -- first CPE project
+<h1>BSQ</h1>
+<h3>{EPITECH} -- First year -- first CPE project</h3>
 
-1st semester CPE unit part I : Grade C
+<p>1st semester CPE unit part I : Grade C</p>
 
-BSQ_2019 -- Without Crash
+<p>BSQ_2019 -- Without Crash</p>
 
-Result : 9,3 %
-
-  - 97x21 rectangle : 0 % -- 0 / 5
-  
-  - 1x1 - intermediate : 0 % -- 0 / 2
-  
-  - line - intermediate : 0 % -- 0 / 5
-  
-  - column - intermediate : 0 % -- 0 / 5
-  
-  - 34x137 rectangle - intermediate : 0 % -- 0 / 5
-  
-  - Square 187x187 - intermediate : 0 % -- 0 / 5
-  
-  - Special cases - intermediate : 0 % -- 0 / 2
-  
-  - Big maps - intermediate : 0 % -- 0 / 10
-  
-  - Error handling : 100 % -- 4 / 4
-  
-Beware of -42 for Epitech students
+<p>Result : 9,3 %</p>
+  <li>97x21 rectangle : 0 % -- 0 / 5</li>
+  <li>1x1 - intermediate : 0 % -- 0 / 2</li>
+  <li>line - intermediate : 0 % -- 0 / 5</li>
+  <li>column - intermediate : 0 % -- 0 / 5</li>
+  <li>34x137 rectangle - intermediate : 0 % -- 0 / 5</li>
+  <li>Square 187x187 - intermediate : 0 % -- 0 / 5</li>
+  <li>Special cases - intermediate : 0 % -- 0 / 2</li>
+  <li>Big maps - intermediate : 0 % -- 0 / 10</li>
+  <li>Error handling : 100 % -- 4 / 4</li>
+  <p></p>
+<p>Beware of -42 for Epitech students</p>
