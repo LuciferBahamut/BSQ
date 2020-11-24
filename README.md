@@ -3,7 +3,7 @@
 
 <p>1st semester CPE unit part I : Grade C</p>
 
-<p>BSQ_2019 -- Without Crash</p>
+<p>BSQ -- Without Crash</p>
 
 <p>Result : 9,3 %</p>
   <li>97x21 rectangle : 0 % -- 0 / 5</li>
